@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<!-- 配置为开发模式 -->
+	<constant name="struts.devMode" value="true"></constant>
+	<!-- 把扩展名配置为 action -->
+	<constant name="struts.action.extension" value="action"></constant>
+	<!-- 把主题配置为 simple -->
+	<constant name="struts.ui.theme" value="simple"></constant>
+
+
+
+	<package name="default" namespace="/" extends="struts-default">
+		<action name="test" class="testAction">
+			<result name="success">/test.jsp</result>
+		</action>
+		
+		<action name="role_*" class="roleAction" method="{1}">
+			<result name="list">WEB-INF/jsp/roleAction/list.jsp</result>
+			<result name="saveUI">WEB-INF/jsp/roleAction/saveUI.jsp</result>
+			<!-- 重定向到list -->
+			<result name="toList" type="redirectAction">role_list</result>
+		</action>
+		
+		
+		<action name="description_*" class="descriptionAction" method="{1}">
+			<result name="list">WEB-INF/jsp/descriptionAction/list.jsp</result>
+			<result name="saveUI">WEB-INF/jsp/descriptionAction/saveUI.jsp</result>
+			<!-- 重定向到list -->
+			<result name="toList" type="redirectAction">description_list</result>
+		</action>
+	</package>
+
+</struts>

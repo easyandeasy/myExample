@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="cn.hibernate.beans">
+    <class name="Students" >
+    	
+    	<id name="sid">
+    		<generator class="native"></generator>
+    	<!-- 
+    		<generator class="sequence">
+    			<param name="sequence"> seq_sid</param>
+    		</generator>
+    		 -->
+    	</id>
+        <property name="sname"/>
+    </class>
+   
+</hibernate-mapping>

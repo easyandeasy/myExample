@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.mybatis.dao.IStudentDao">
+	<resultMap type="Classs" id="classMapper">
+			<id column="cid" property="cid"/>
+			<result column="cname" property="cname"/>
+			<result column="department" property="department"/>
+	</resultMap>
+	
+	
+		
+	<!-- 一对多关联查询 -->
+		
+	<select id="selectStudentByCid" resultType="Student">
+		select * from student where sclass = #{cid}
+	</select>
+	
+	<resultMap type="Classs" id="selectClass" extends="classMapper">
+		<collection property="stu" javaType="ArrayLIst" select="selectStudentByCid" column="cid"></collection>
+	</resultMap>
+	
+	<select id="selectClassStudent" resultType="Classs" resultMap="selectClass">
+		select * from class
+	</select>
+	
+</mapper>

@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+<session-factory>
+	<!-- 数据库连接信息 -->
+	<!-- 数据库方言 -->
+		<property name="dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
+	<!--   
+		<property name="connection.driver_class">com.jdbc.mysql.jdbcDriver</property>
+		<property name="connection.url">jdbc:mysqlsql:///administration</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">123456</property>
+	-->
+	<!-- 其他配置 -->
+	<property name="show_sql">true</property>
+	<property name="hbm2ddl.auto">update</property>
+
+	<!-- 引入映射文件 -->
+	<!--  <mapping class=""/> -->
+	<mapping resource="cn/ssh/beans/User.hbm.xml" />
+	<mapping resource="cn/ssh/beans/Role.hbm.xml" />
+	<mapping resource="cn/ssh/beans/Description.hbm.xml" />
+
+</session-factory>
+</hibernate-configuration>

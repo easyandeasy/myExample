@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    <hibernate-mapping package="cn.hibernate.entity">
+    	<class name="Carport">
+    		<id name="pid">
+    			<generator class="native"/>
+    		</id>
+    		<property name="location"/>
+    		<property name="size"/>
+    		<!-- 外健一对一映射 ，又向维护关系 -->
+    		<many-to-one name="car" cascade="save-update"  unique="true" column="carId" class="Car" />
+    	</class>
+    </hibernate-mapping>

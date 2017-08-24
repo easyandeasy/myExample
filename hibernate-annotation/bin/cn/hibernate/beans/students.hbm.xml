@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="cn.hibernate.beans">
+    <class name="Students" >
+    	<id name="sid">
+    		<generator class="native"></generator>
+    	</id>
+        <property name="sname"/>
+        <many-to-one name="cls" column="sid" class="Classs" cascade="save-update"></many-to-one>
+    </class>
+    
+    
+ <!-- 查询方式一 -->  
+    <!-- 原sql语句命名查询 -->
+	<!-- <sql-query name="sqlQueryStudent">
+		<return class="cn.hibernate.beans.Students"></return>
+		<![CDATA[
+			select * from students
+		]]>
+	</sql-query>   
+	 -->
+	<!-- HQL语句命名查询 -->
+	<!-- <query name="hqlQueryStudent">
+		<![CDATA[
+			from Students
+		]]>
+	</query>
+	 -->
+	
+	
+	
+<!-- 查询方式 二 -->
+	<!-- sql -->
+	<sql-query name="sqlQueryStudents">
+		select * from students
+	</sql-query>
+	
+	<!-- hql -->
+	<query name="hqlQueryStudents">
+		from Students
+	</query>
+</hibernate-mapping>

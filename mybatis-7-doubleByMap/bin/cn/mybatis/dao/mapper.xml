@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.mybatis.dao.IUserDao">
+	<!-- 第一种方法查询：
+		1.1:可以取map集合中的key对应的值
+	<select id="selectUsersByNameAndAge" resultType="Users">
+		select id,name,age,score from users where name like '%' #{sname} '%' and age > #{sage}常用
+	</select>
+	 -->
+	 
+	 <!-- 1.2：可以将对象传过来，取对象中的对应属性的值
+	<select id="selectUsersByNameAndAge" resultType="Users">
+		select id,name,age,score from users where name like '%' #{sname} '%' and age > #{sage} and score > #{u.score}
+	</select>
+	 -->
+	 
+	 <!-- 根据接口中的参数顺序，使用索引取值，从0开始 -->
+	<select id="selectUsersByNameAndAge" resultType="Users">
+		select id,name,age,score from users where name like '%' #{0} '%' and age > #{1} 
+	</select>
+	 
+	 <!-- 
+	 	总结：
+	 		#{}是可以放什么内容？
+	 		1）：参数对象的属性
+	 		2）：随意内容，此时的#{}是个占位符
+	 		3）：参数为map时的key
+	 		4）：参数为map时，若key所对应的value值为对象，	则可以用key的值点属性，如：#{u.score} u表示对象，score是对象的属性
+	 		5）：参数的索引
+	  -->
+</mapper>

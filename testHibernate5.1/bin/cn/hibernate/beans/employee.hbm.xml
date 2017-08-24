@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    <hibernate-mapping>
+    	<class name="cn.hibernate.beans.Employee">
+    		<id name="eid">
+    			<generator class="native"/>
+    		</id>
+    		<property name="ename"/>
+    		<set name="proSet" inverse="false" cascade="save-update" table="middle">
+    			<key column="eid"/>
+    			<many-to-many class="cn.hibernate.beans.Project" column="pid"/>
+    		</set>
+    	</class>
+    </hibernate-mapping>

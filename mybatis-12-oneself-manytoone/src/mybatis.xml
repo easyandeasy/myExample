@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<!-- 注册DB连接四要素属性文件引用 -->
+	<properties resource="mysql-jdbc.properties"/>
+	
+	<!-- 定义类的别名 -->
+	<typeAliases>
+		<!-- 第一种方法 -->
+		<!-- <typeAlias type="cn.mybatis.beans.Users" alias="Users"/> -->
+		
+		<!-- 第二种方法 ：将该中的所有类名当作为别名-->
+		<package name="cn.mybatis.beans"/>
+	</typeAliases>
+	
+	
+	<!-- 配置运行环境 -->
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<property name="driver" value="${jdbc.driver}" />
+				<property name="url" value="${jdbc.url}" />
+				<property name="username" value="${jdbc.user}" />
+				<property name="password" value="${jdbc.password}" />
+			</dataSource>
+		</environment>
+	</environments>
+	<!-- 注册映射文件 -->
+	<mappers>
+		<mapper resource="cn/mybatis/dao/mapper.xml" />
+	</mappers>
+</configuration>

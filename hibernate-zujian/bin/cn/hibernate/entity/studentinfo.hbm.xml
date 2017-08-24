@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="cn.hibernate.entity">
+	<class name="StudentInfo">
+		<id name="sid">
+			<generator class="native" />
+		</id>
+		<property name="sname" />
+		<component name="shome" class="StudentHomeAddress">
+			<parent name="studentInfo" />
+			<property name="shomeStreet"/>
+			<property name="shomeCity"/>
+			<property name="shomeProvince"/>
+			<property name="shomeZipCode"/>
+		</component>
+	</class>
+</hibernate-mapping>

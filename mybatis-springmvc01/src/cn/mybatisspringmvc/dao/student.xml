@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="test">
+
+	<!-- 查询所有学生信息 -->
+	<select id="selectStudentInfo" resultType="Student">
+		select * from student
+	</select>
+
+	<!-- 添加 -->
+	<select id="insertStudentInfo" resultType="Student">
+		INSERT INTO student(id,sname,sbirth,sclass,saddress) values(#{id},#{sname},#{sbirth},#{sclass},#{saddress})
+	</select>
+	
+	<!-- 删除 -->
+	<select id="deleteStudentInfo" resultType="Student">
+		DELETE FROM student WHERE id = #{id} 
+	</select>
+	
+	
+	<!-- 修改 -->
+	<update id="updateStudentInfo" parameterType="Student">
+		update student 
+		<set>
+			<if test="sname != null">
+				sname = #{sname},
+			</if>
+			<if test="sbirth != null">
+				sbirth = #{sbirth},
+			</if>
+			<if test="sclass != null">
+				sclass = #{sclass},
+			</if>
+			<if test="saddress != null">
+				saddress = #{saddress},
+			</if>
+		</set>
+		<where>
+			<if test="id != 0">
+				id = #{id}
+			</if>
+		</where>
+	</update>
+</mapper>

@@ -1,0 +1,23 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+<session-factory>
+	<!--数据库信息  -->
+	<property name="connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+	<property name="connection.url">jdbc:oracle:thin:@127.0.0.1:1521:orcl</property>
+	<property name="connection.username">jing</property>
+	<property name="connection.password">jing</property>
+	<!--hibernate可选项 -->
+	<property name="show_sql">true</property>
+	<!-- hbm文件 -->
+	<property name="myeclipse.connection.profile">oracle</property>
+	<property name="dialect">org.hibernate.dialect.Oracle9Dialect</property>
+	<property name="hibernate.temp.use_jdbc_metadata_defaults">
+		false
+	</property>
+	<property name="hbm2ddl.auto">update</property>
+	<mapping resource="cn/hibernate/beans/students.hbm.xml" />
+</session-factory>
+</hibernate-configuration>

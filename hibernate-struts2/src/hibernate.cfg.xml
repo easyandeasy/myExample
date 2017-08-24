@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+<session-factory>
+	<property name="connection.driver_class">
+		org.gjt.mm.mysql.Driver
+	</property>
+	<property name="connection.url">jdbc:mysql:///test</property>
+	<property name="connection.username">root</property>
+	<property name="connection.password">123456</property>
+
+	<!-- hibernate可选项 -->
+	<!-- 数据库文言 -->
+	<property name="dialect">
+		org.hibernate.dialect.MySQL5Dialect
+	</property>
+	<!-- 是否打印sql语句 -->
+	<property name="show_sql">true</property>
+	<!-- 格式化sql语句 -->
+	<property name="format_sql">true</property>
+	
+	
+	<mapping resource="cn/sh/bean/user.hbm.xml" />
+
+</session-factory>
+
+</hibernate-configuration>

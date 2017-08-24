@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.mybatis.dao.IStudentDao">
+	<!-- 查询学生所有信息 -->
+	<resultMap type="Student" id="studentMapper">
+		<id column="id" property="id"/>
+		<result column="sname" property="sname"/>
+		<result column="sbirth" property="sbirth"/>
+		<result column="scalss" property="sclass"/>
+		<result column="saddress" property="saddress"/>
+	</resultMap>
+	
+
+	<!-- 查询学生和班级所有信息  <多对一：多个学生对应一个班级>-->
+	<!-- 第一种方式： -->
+<!-- 
+	<resultMap type="Student" id="studentMappers">
+		<id column="id" property="id"/>
+		<result column="sname" property="sname"/>
+		<result column="sbirth" property="sbirth"/>
+		<result column="scalss" property="sclass"/>
+		<result column="saddress" property="saddress"/>
+		<association property="cls" javaType="Classs" >
+			<id property="cid" column="cid"/>
+			<result column="cname" property="cname"/>
+			<result column="department" property="department"/>
+		</association>
+	</resultMap>
+-->
+	<!-- 第二种方式： -->
+	<resultMap type="Student" id="studentMappers" extends="studentMapper"><!-- 此处的extends是继承上面定义的resultMap的id -->
+		<collection property="sourses" ofType="Sourse" > <!-- 此处的resultMap引用 stuScore.xml 文件中定义的resultMap的id -->
+			<id column="sourseid" property="sourseid"/>
+			<result column="soursename" property="soursename"/>
+		</collection>
+	</resultMap>
+	
+	<select id="selectStudentStuSourse" resultMap="studentMappers">
+		    select id,sname,sbirth,sclass,saddress,s.sourseid,s.soursename from student 
+      left join middle m on studentid = id left join sourse s on s.sourseid = m.sourseid
+	</select>
+	
+	
+	
+	<!-- 查询出来的结果封装成一个map集合，键是对应的列名，值是对应列的值 -->
+	<select id="selectStudentSourseMap" resultType="java.util.Map">
+	    select id,sname,sbirth,sclass,saddress,s.sourseid,s.soursename from student 
+      left join middle m on studentid = id left join sourse s on s.sourseid = m.sourseid
+	</select>
+	
+	
+	
+
+</mapper>

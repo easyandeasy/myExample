@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context" 
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context.xsd">
+        <!-- bean definitions here -->
+        
+        
+    <!-- 第一种、连接数据源：spring内置数据源 -->
+    
+    <!-- 
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource.class">
+    	<property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+    	<property name="url" value="jdbc:mysql:///test"/>
+    	<property name="username" value="root"/>
+    	<property name="password" value="123456"/>
+    </bean> 
+   -->
+    
+    
+    <!-- 第二种、连接数据源：DBCP数据源 -->
+    
+   <!--  <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+    	<property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+    	<property name="url" value="jdbc:mysql:///test"/>
+    	<property name="username" value="root"/>
+    	<property name="password" value="123456"/>
+    </bean>
+     -->
+     
+    <!-- 第三种、连接数据源：C3P0数据源 -->
+    
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+    	<property name="driverClass" value="com.mysql.jdbc.Driver"/>
+    	<property name="jdbcUrl" value="jdbc:mysql:///test"/>
+    	<property name="user" value="root"/>
+    	<property name="password" value="123456"/>
+    </bean>
+    
+     
+    <!-- 第四种、连接数据源：C3P0数据源  ，从properties文件中获取四要素-->
+    <!-- 
+    <bean id="dataSources" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+    	<property name="driverClass" value="${jdbc.driver}"/>
+    	<property name="jdbcUrl" value="${jdbc.url}"/>
+    	<property name="user" value="${jdbc.username}"/>
+    	<property name="password" value="${jdbc.password}"/>
+    </bean>
+    	 -->	
+		    <!-- 第一种方式:注册属性文件 jdbc.properties -->
+		    <!-- 
+		    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		    	<property name="location" ref="classpath:jdbc.properties"></property>
+		    </bean>
+    		 -->
+    
+    		  <!-- 第二种方式:注册属性文件 jdbc.properties 
+    		  	需要添加引用：http://www.springframework.org/schema/context
+    		  -->	
+    		 <!--  <context:property-placeholder location="classpath:jdbc.properties"/> -->
+    		  
+    		  
+    
+    <!-- 注册jdbc模板 -->
+    <!-- 
+    <bean id="jdbcTemp" class="org.springframework.jdbc.core.JdbcTemplate">
+    	<property name="dataSource" ref="dataSources"></property>
+    </bean>
+     -->
+    
+    <!-- 注册数据访问层层 -->
+    <bean id="studentDao" class="cn.spring.dao.StudentDaoImpl">
+    	<property name="dataSource" ref="dataSource"></property>
+    </bean>
+    
+    <!-- 注册业务层 -->
+    <bean id="service" class="cn.spring.service.StudentServiceImpl">
+    	<property name="dao" ref="studentDao"></property>
+    </bean>
+</beans>

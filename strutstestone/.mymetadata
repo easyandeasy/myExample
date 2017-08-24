@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="strutstestone"
+  id="myeclipse.1496754445474"
+  context-root="/strutstestone"
+  j2ee-spec="5.0"
+  archive="strutstestone.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

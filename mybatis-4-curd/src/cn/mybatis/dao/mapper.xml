@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="tests">
+	<!-- 
+		parameterType中的值是mybatis配置文件中配置的别名 
+		parameterType该属性也是可以省略不写
+	-->
+	<insert id="insertUsers" parameterType="Users">
+		insert into users(name,age,score) values(#{name},#{age},#{score})
+	</insert>
+	
+	<insert id="insertUserCacheId">
+		insert into users(name,age,score) values(#{name},#{age},#{score})
+		<!-- 插入成功后获取id的值：第一个属性是指定id的类型，第二个属性是指定值是给类中的哪个属性的，第三个属性是指定执行插入后添加id的值 -->
+		<selectKey resultType="int" keyProperty="id" order="AFTER">
+			select @@identity
+		</selectKey>
+		
+		
+	</insert>
+	
+	<delete id="deleteUserById">
+		delete from users where id=#{id} 	<!-- 这里的#{}就是个占位符，里面内容放什么都行 -->
+	</delete>
+	
+	
+	<update id="updateUser">
+		update users set name=#{name},age=#{age},score=#{score} where id=#{id}
+	</update>
+	
+	<select id="selectAllUsers" resultType="Users">
+		select id,name,age,score from users
+	</select>
+	
+	
+	<select id="selectUsersById" resultType="Users">
+		select id,name,age,score from users where id=#{id}
+	</select>
+	
+	<select id="selectUsersByName" resultType="Users">
+		<!-- select id,name,age,score from users where name like concat('%',#{name},'%') -->
+		<!-- select id,name,age,score from users where name like '%${value}%' --> <!-- 容易sql注入攻击 -->
+		select id,name,age,score from users where name like '%' #{name} '%' <!-- 常用 -->
+	</select>
+	
+</mapper>

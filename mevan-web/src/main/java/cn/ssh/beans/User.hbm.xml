@@ -1,0 +1,30 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="cn.ssh.beans">
+
+	<class name="User">
+		<id name="id">
+			<generator class="native" />
+		</id>
+		<property name="loginName" />
+		<property name="name" />
+		<property name="pwd" />
+		<property name="gender" />
+		<property name="phoneNumber" />
+		<property name="email" />
+
+		<!-- description属性，本类与Description是多对一 -->
+		<many-to-one name="description" class="Description"
+			column="descriptionId" />
+
+		<!-- role属性，本类与Role是多对多 -->
+		<set name="role" table="user_role_middle">
+			<key column="userId" />
+			<many-to-many class="Role" column="roleId" />
+		</set>
+
+	</class>
+
+</hibernate-mapping>

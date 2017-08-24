@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="default" extends="json-default" namespace="/">
+		
+		<action name="jsonAction" class="cn.json.action.JsonAction">
+			<result type="json">
+				<param name="root">root</param>
+			</result>
+		</action>
+		
+		<action name="ajaxAction" class="cn.ajax.action.AjaxAction"></action>
+		
+		<action name="car" class="com.car.action.CarAction"></action>
+	</package>
+</struts>    

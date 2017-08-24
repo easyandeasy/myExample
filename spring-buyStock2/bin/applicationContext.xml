@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:aop="http://www.springframework.org/schema/aop"
+        xmlns:context="http://www.springframework.org/schema/context" 
+        xmlns:tx="http://www.springframework.org/schema/tx" 
+        xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/tx 
+        http://www.springframework.org/schema/tx/spring-tx.xsd
+        http://www.springframework.org/schema/aop 
+        http://www.springframework.org/schema/aop/spring-aop.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context.xsd">
+        
+     <!-- ================数据源======================================= -->
+    <!-- 连接数据源：C3P0数据源 -->
+    
+    <bean id="dataSources" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+    	<property name="driverClass" value="com.mysql.jdbc.Driver"/>
+    	<property name="jdbcUrl" value="jdbc:mysql:///test"/>
+    	<property name="user" value="root"/>
+    	<property name="password" value="123456"/>
+    </bean>
+    
+    <!--  
+     <bean id="dataSources" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+    	<property name="driverClass" value="${jdbc.driver}"/>
+    	<property name="jdbcUrl" value="${jdbc.url}"/>
+    	<property name="user" value="${jdbc.username}"/>
+    	<property name="password" value="${jdbc.password}"/>
+    </bean>
+    
+    <context:property-placeholder location="classpath:jdbc.properties"/>
+     -->
+     <!-- ================普通bean的注册======================================= -->
+     
+    <!-- 注册用户数据访问层层 -->
+    <bean id="accountDao" class="cn.spring.dao.AccountDaoImpl">
+    	<property name="dataSource" ref="dataSources"></property>
+    </bean>
+    <!-- 注册股票数据访问层层 -->
+    <bean id="stockDao" class="cn.spring.dao.StockDaoImpl">
+    	<property name="dataSource" ref="dataSources"></property>
+    </bean>
+    
+    <!-- 注册业务层 -->
+    <bean id="buyStockService" class="cn.spring.service.BuyStockServiceImpl">
+    	<property name="adao" ref="accountDao"/>
+    	<property name="sdao" ref="stockDao"/>
+    </bean>
+    
+    
+     <!-- ================事物======================================= -->
+     <!-- 第一种方式  spring的事物代理工厂bean-->
+     
+    <!-- 注册事物管理器 -->
+    
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+    	<property name="dataSource" ref="dataSources"/>
+    </bean>
+    
+    <!-- 生成事物的代理对象 -->
+    
+     <bean id="serviceProxy" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+     	<property name="target" ref="buyStockService"/><!-- 目标对象 -->
+     	<property name="transactionManager" ref="transactionManager"/>
+     	<property name="transactionAttributes">
+     		<props>
+     			<!-- 这里配置的是：在指定的切入点上要应用什么事物属性 -->
+     			<prop key="open*">ISOLATION_DEFAULT,PROPAGATION_REQUIRED</prop>
+     			<prop key="buyStock">ISOLATION_DEFAULT,PROPAGATION_REQUIRED,-BuyStockException</prop>
+     		</props>
+     	</property>
+     </bean>
+         
+      
+</beans>

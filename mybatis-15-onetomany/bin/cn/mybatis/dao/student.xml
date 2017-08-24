@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.mybatis.dao.IStudentDao">
+	<!-- 查询学生所有信息 -->
+	<resultMap type="Student" id="studentMapper">
+		<id column="id" property="id"/>
+		<result column="sname" property="sname"/>
+		<result column="sbirth" property="sbirth"/>
+		<result column="scalss" property="sclass"/>
+		<result column="saddress" property="saddress"/>
+	</resultMap>
+	
+	
+	<select id="selectStudent" resultMap="studentMapper">
+		select * from student
+	</select>
+	
+	
+	<!-- 查询学生和班级所有信息  <多对一：多个学生对应一个班级>-->
+	<!-- 第一种方式： -->
+<!-- 
+	<resultMap type="Student" id="studentMappers">
+		<id column="id" property="id"/>
+		<result column="sname" property="sname"/>
+		<result column="sbirth" property="sbirth"/>
+		<result column="scalss" property="sclass"/>
+		<result column="saddress" property="saddress"/>
+		<association property="cls" javaType="Classs" >
+			<id property="cid" column="cid"/>
+			<result column="cname" property="cname"/>
+			<result column="department" property="department"/>
+		</association>
+	</resultMap>
+-->
+	<!-- 第二种方式： -->
+	<resultMap type="Student" id="studentMappers" extends="studentMapper"><!-- 此处的extends是继承上面定义的resultMap的id -->
+		<association property="cls" javaType="Classs" resultMap="classMapper"> <!-- 此处的resultMap引用 class.xml 文件中定义的resultMap的id -->
+		</association>
+	</resultMap>
+	
+	<select id="selectStudentClass" resultMap="studentMappers">
+		select * from student s inner join class c  on c.cid = s.sclass
+	</select>
+	
+	<!-- 查询出来的结果封装成一个map集合，键是对应的列名，值是对应列的值 -->
+	<select id="selectStudentClassMap" resultType="java.util.Map">
+		select * from student s inner join class c  on c.cid = s.sclass
+	</select>
+	
+	
+	
+
+</mapper>

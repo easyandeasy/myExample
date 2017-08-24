@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.car.dao.ICarDao">
+	<!-- 查询所有车的信息 -->
+	
+	<resultMap type="Car" id="carMap">
+		<id column="cid" property="cid"/>
+		<result column="ctype" property="ctype"/>
+		<result column="cname" property="cname"/>
+		<result column="ccolor" property="ccolor"/>
+		<result column="cprice" property="cprice"/>
+		<result column="ccard" property="ccard"/>
+		<result column="cstatus" property="cstatus"/>
+		<collection property="status" ofType="Cstatus">
+			<id column="id" property="id"/>
+			<result column="name" property="name"/>
+		</collection>
+	</resultMap>
+	
+	<select id="selectCarMap" resultMap="carMap">
+		select * from car inner join cstatus on car.cstatus= cstatus.id
+	</select>
+</mapper>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.mybatisspringmvc.dao.IStudentDao">
+
+	<resultMap type="cn.mybatisspringmvc.beans.Student" id="BaseResultMap">  
+        <result property="id" column="id" />  
+        <result property="sname" column="sname" />  
+        <result property="sbirth" column="sbirth" />  
+        <result property="sclass" column="sclass" />  
+        <result property="saddress" column="saddress" />  
+    </resultMap> 
+	<!-- 查询所有学生信息 -->
+	<select id="selectStudentInfo" resultType="Student">
+		select * from student order by id asc
+	</select>
+	<!-- 查询所有学生总人数 -->
+	<select id="selectStudentInfoCount" resultType="int">
+		select count(id) from student
+	</select>
+	
+		<!-- 在Mapper配置文件中配置开启二级缓存 -->
+	<cache  type="org.mybatis.caches.ehcache.EhcacheCache"/>
+	
+	
+	<!-- 使用分页进行查询学生信息 -->
+	<select id="selectStudentInfoPage" parameterType="java.util.Map" resultType="Student">
+		select * from (select a.*,rownum row_num from (select * from student s order by s.id asc) a) b  where b.row_num between #{startRow} and #{endRow}
+	</select>
+
+	<!-- 添加 -->
+	<insert id="insertStudentInfo">
+		<!-- oracle数据库不能自动生成主键，采用序列生成 -->
+		<selectKey keyProperty="id" resultType="int" order="BEFORE">
+			select seq_stuid.nextval from dual
+		</selectKey>
+		insert into student(id,sname,sbirth,sclass,saddress) values(#{id},#{sname},#{sbirth},#{sclass},#{saddress})
+		<!-- 插入成功后获取id的值：第一个属性是指定id的类型，第二个属性是指定值是给类中的哪个属性的，第三个属性是指定执行插入后添加id的值 -->
+		<!-- <selectKey resultType="int" keyProperty="id" order="AFTER">
+			select @@identity
+		</selectKey> -->
+	</insert>
+	
+	
+	<!-- 删除 -->
+	<select id="deleteStudentInfo" resultType="Student">
+		DELETE FROM student WHERE id = #{id} 
+	</select>
+	
+	
+	<!-- 修改 -->
+	<update id="updateStudentInfo" parameterType="Student">
+		update student 
+		<set>
+			<if test="sname != null">
+				sname = #{sname},
+			</if>
+			<if test="sbirth != null">
+				sbirth = #{sbirth},
+			</if>
+			<if test="sclass != null">
+				sclass = #{sclass},
+			</if>
+			<if test="saddress != null">
+				saddress = #{saddress},
+			</if>
+		</set>
+		<where>
+			<if test="id != 0">
+				id = #{id}
+			</if>
+		</where>
+	</update>
+</mapper>
