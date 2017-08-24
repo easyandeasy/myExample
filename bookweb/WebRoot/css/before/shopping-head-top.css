@@ -1,0 +1,221 @@
+/**设置全部边距为零*/
+*{
+	padding: 0px;margin: 0px;font-size: 12px;font-family: "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑";
+}
+
+/*最大div*/
+.box-1{
+	width:1347px;height:670px;border:solid 0px #000;overflow:hidden;margin:0px 0px 0px 0px;
+}
+
+/*个人首页及登录div样式*/
+.box-2{
+	height:30px;width:1347px;border:1px solid #f7f7f7;border-top:0px;background:#f0f0f0;overflow:hidden;
+}
+
+/*搜索框div样式*/
+.box-3{
+	height:80px;width:370px;margin-left:505px;
+}
+.center{
+	height:80px;width:1362px;
+}
+
+/*我的购物车样式*/
+.buy-che{
+	position:absolute;top:55px;left:1050px;width:135px;height:32px;border:solid 1px #e5e5e5;
+	box-shadow:0px 0px 8px #e5e5e5;
+}
+.buy-che-1{
+	float:left;height:32px;width:48px;text-align:center;
+}
+.buy-che-2{
+	float:left;height:32px;width:86px;text-align:center;background:#f8f8f8;
+}
+.buy-che-2 a{
+	text-decoration: none;line-height:32px;color:#666;
+}
+.buy-che-1 img{
+	margin-top:0px;
+}
+.buy-che-2 a:hover{
+	color:#ed155b;cursor:pointer;
+}
+.span-buy-gouwu{
+	position:absolute;top:56px;left:1082px;width:15px;height:15px;
+	color:#ed155b;border-radius:15px;line-height:15px;text-align: center;
+}
+
+/*欢迎登录样式*/
+.span-1{
+	float:left;margin:6px 0px 0px 160px;color:#666;
+}
+
+/*个人中心及登录样式*/
+.a-1{
+	text-decoration: none;float:left;margin:6px 0px 0px 20px;color:#666;
+}
+.a-2{
+	text-decoration: none;float:left;margin:6px 0px 0px 650px;color:#666;
+}
+.a-1:hover{
+	color:#D9534F;
+}
+.a-2:hover{
+	color:#D9534F;
+}
+
+/**搜索文本框样式*/
+.input-1{
+	height:34px;width:300px;float:left;margin:22px 0px 0px 0px;border:1px solid #d0d0d0;border-right:0px;
+	padding-left:10px;border-radius:2px 0px 0px 2px;border-color:#ed155b;
+}
+
+/**搜索按钮样式*/
+.input-2{
+	height:34px;width:60px;float:left;margin:22px 0px 0px -1px;border-radius:0px 2px 2px 0px;border:0px solid #d0d0d0;
+	color:#fff;background:#ed155b;
+}
+.input-2:hover{
+	cursor:pointer;
+	background:#d43f3a;
+}
+
+/*每日特div盒子框*/
+.box-4{
+	height: 240px;width:1038px;float:left;margin:3px 0px 0px 160px;
+	background: #cdcdcd;border:solid 1px #f8f8f8;
+}
+
+/*设置特价div样式*/
+.box-tejia-1{
+	border:1px solid #fff;width:500px; height:175px;background: #fff;float:left;margin:33px 0px 0px 12px;
+}
+.box-tejia-2{
+	border:1px solid #fff;width:500px; height:175px;background: #fff;float:left;margin:33px 0px 0px 10px;
+}
+
+/*设置每日特价文字样式*/
+.span-tejia-1{
+	font-family: inherit;font-weight: 500;line-height: 1.1;color: inherit;font-size:24px;float:left;
+	margin:18px 0px 0px 15px;
+}
+
+/*设置今日促销内图片样式*/
+.img-2{
+	float:left;margin:13px 0px 0px 25px;width:150px;height:145px;transition: all 0.8s;border:1px solid #fff;
+}
+.img-2:hover{
+	 transform: scale(0.9,0.9);
+}
+.img-3{
+	float:left;margin:13px 0px 0px 29px;width:150px;height:145px;transition: all 0.8s;border:1px solid #fff;
+}
+.img-3:hover{
+	 transform: scale(0.9,0.9);
+}
+
+/*设置程序员必备样式*/
+.span-tejia-3{
+	float:left;margin:65px 0px 0px -94px;
+}
+
+/*设置 buy now 样式*/
+.box-tejia-3{
+	border: 2px solid black;height: 30px;width:80px;
+	line-height: 30px;text-align: center;transition: background 0.5s;
+	float:left;margin:105px 0px 0px -95px;
+}
+
+/*设置鼠标移入移出改变购买div样式*/
+.box-tejia-3:hover{
+	background: #C1121D;border: 2px solid #C1121D;
+}
+
+/*设置鼠标移入移出文本变色*/
+.box-tejia-3 a:hover{
+	color: white;
+}
+
+/*设置div内马上购买超链接样式*/
+.box-tejia-3 a{
+	text-decoration: none;
+	font-size: 12px;color: black;font-weight: bold;transition: color 0.4s;
+}
+
+
+
+
+/*个人中心盒子鼠标移入显示*/
+.box-user-1{
+	position:absolute;height:75px;top:32px;left:932px;border:solid 1px #ddd;
+	width:80px;background:#fff;text-align: center;border-radius:5px 5px 0px 0px;
+	display:none;
+}
+
+
+
+/*设置个人中心修改密码div盒子高度宽度*/
+.box-user-2{
+	border-bottom:1px solid #ddd;width:80px;height:25px;
+}
+.box-user-3{
+	border-bottom:1px solid #ddd;width:80px;height:25px;float:left;margin:0px;
+}
+.box-user-4{
+	width:80px;height:25px;float:left;margin:0px;
+}
+
+
+/*设置个人中心超链接样式*/
+.box-user-2 a{
+	text-decoration: none;line-height:25px;color:#222;
+}
+.box-user-3 a{
+	text-decoration: none;line-height:25px;color:#222;
+}
+.box-user-4 a{
+	text-decoration: none;line-height:25px;color:#222;
+}
+
+
+
+/*设置个人中心超链接鼠标移入移除的样式*/
+.box-user-2 a:hover{
+	color:#D9534F;
+}
+.box-user-3 a:hover{
+	color:#D9534F;
+}
+.box-user-4 a:hover{
+	color:#D9534F;
+}
+
+
+
+/*设置修改密码个人中心盒子，鼠标移入移除改变背景色*/
+.box-user-2:hover{
+	background: #ddd;
+}
+.box-user-3:hover{
+	background: #ddd;
+}
+.box-user-4:hover{
+	background: #ddd;
+}
+
+
+
+/*设置鼠标悬浮在个人中心上出现小尖角*/
+.span-user{
+	position:absolute;top:11px;left:963px;border-width:10px;
+	border-style:dashed dashed solid dashed;
+	border-color:transparent transparent #fff transparent;display:none;
+}
+
+
+
+/*js 添加样式**/
+.addjs{
+	box-shadow:0 0 2px #C1121D;
+}

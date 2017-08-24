@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT mystruts-config (action-mappings)>
+<!ELEMENT action-mappings (action*)>
+<!ELEMENT action (forward*)>
+<!ELEMENT forward EMPTY>
+
+
+<!ATTLIST action
+	path CDATA #REQUIRED
+	type CDATA #REQUIRED
+	redirect (true | false) #IMPLIED
+>
+
+<!ATTLIST forward 
+	name CDATA #REQUIRED
+	path CDATA #REQUIRED
+>

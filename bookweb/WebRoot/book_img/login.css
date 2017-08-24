@@ -1,0 +1,44 @@
+.bod,.admin{
+	margin:0px;
+	padding:0px;
+}
+.box2{
+	float:left;height:270px;width:365px;border:1px solid #EEE;margin:224px 0px 0px 490px;background-color: #fff;
+	border-bottom:0px;
+}
+.box{
+	border: 1px solid #d0d0d0; background: url(../images/02.jpg) repeat-y -250px;height:495px;margin-top:67px;width:100%;
+	border-bottom:0px;
+}
+
+.img1{
+	float:left;margin:25px 0px 0px 120px;
+}
+.input1{
+	float:left;border:1px solid #d0d0d0;border-left:0px;width:210px;height:42px;margin:-42px 0px 0px 92px;font-size: 15px;
+}
+.input2{
+	float:left;width:210px;height:42px;border:1px solid #d0d0d0;border-left:0px;margin:-42px 0px 0px 92px;font-size: 15px;
+}
+.span1{
+	float:left;margin:20px 0px 0px 50px;width:40px;height:40px;text-align:center;border:1px solid #d0d0d0;
+}
+.span2{
+	float:left;margin:20px 0px 0px 50px;width:40px;height:40px;text-align:center;border:1px solid #d0d0d0;
+}
+.img2{
+	padding-top:10px;
+}
+.img3{
+	padding-top:10px;
+}
+.sub{
+	float:left;border:1px solid #d0d0d0;margin:17px 0px 0px 50px;width:253px;height:40px;border-radius:9px;
+	background-color:#62B0FF;color:#fff;font-size: 17px;
+}
+.a1{
+	text-decoration: none;color:#8C8C8C;font-size:12px;float:left;margin:10px 0px 0px 50px;
+}
+.a2{
+	color:#8C8C8C;font-size:12px;text-decoration: none;float:left;margin:10px 0px 0px 175px;
+}

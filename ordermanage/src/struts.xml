@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<constant name="struts.custom.il8n.resources" value="message"/>
+	<constant name="struts.il8n.encoding" value="UTF-8"/>
+	<constant name="struts.ui.theme" value="simple"/>
+	<package name="default" extends="struts-default" namespace="/">
+		<action name="order_*" class="cn.ordermanage.action.OrdersAction" method="{1}">
+			<result name="success">{1}.jsp</result>
+			<result name="input">error.jsp</result>
+		</action>
+	</package>
+</struts>    

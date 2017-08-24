@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mystruts-config SYSTEM "mystruts-config.dtd">
+<mystruts-config>
+	<action-mappings>
+		<action path="login" type="com.mystruts.servlet.LoginServlet" redirect="true">
+			<forward name="success" path="manager.jsp" />
+			<forward name="failed" path="login.jsp" />
+		</action>
+		
+		
+		<action path="register" type="com.mystruts.servlet.RegisterServlet" redirect="true">
+			<forward name="success" path="manager.jsp" />
+			<forward name="failed" path="register.jsp" />
+		</action>
+	</action-mappings>
+</mystruts-config>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <mystruts-config>
+	<action-mappings>
+		<action path="login" type="com.mystruts.servlet.LoginServlet" redirect="true">
+			<forward name="success" path="manager.jsp" />
+			<forward name="failed" path="login.jsp" />
+		</action>
+		
+		<action path="register" type="com.mystruts.servlet.RegisterServlet" redirect="true">
+			<forward name="success" path="manager.jsp" />
+			<forward name="failed" path="register.jsp" />
+		</action>
+	</action-mappings>
+</mystruts-config> -->

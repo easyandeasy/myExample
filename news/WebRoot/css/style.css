@@ -1,0 +1,213 @@
+body {
+	width: 1010px;
+	margin: 10px auto;
+}
+
+.login {
+	height: 18px;
+	padding: 1px;
+	background-image: url(../images/admin_bar.gif);
+}
+
+.logintop {
+	height: 18px;
+	padding: 1px;
+	width: 953px;
+	background-image: url(../images/admin_bar.gif);
+}
+
+.img {
+	margin-top: 15px;
+}
+
+.midden {
+	margin-top: 15px;
+}
+
+.side_list {
+	height: 250px;
+	width: 157px;
+	background-image: url("../images/sidebarbg.gif");
+}
+
+.side_list {
+	margin-top: 15px;
+	list-style: none;
+}
+
+.side_list a {
+	font-size: 14px;
+	color: #000;
+	text-decoration: none;
+}
+
+.side_list a:hover,.side_list a:hover {
+	color: blue;
+	text-decoration: underline;
+}
+
+.sidebar div,.sidebar div {
+	margin-left: 3px;
+}
+
+.right {
+	float: right;
+}
+
+.right-head {
+	width: 781px;
+	height: 28px;
+	background-image: url("../images/class_bg.gif");
+}
+
+.right-head-login {
+	width: 944px;
+	height: 20px;
+	padding: 5px;
+	margin-top: 15px;
+	background-image: url("../images/nav_leftline.gif");
+}
+
+.rightimg {
+	height: 22px;
+	margin-left: 18px;
+}
+
+.text-head {
+	margin-top: 10px;
+}
+
+.text-head a {
+	color: #000;
+	text-decoration: none;
+	margin-right: 30px;
+}
+
+.text-head a:hover {
+	color: blue;
+	text-decoreation: underline;
+}
+
+.text-head-two {
+	margin-top: 10px;
+}
+
+.text1 a {
+	text-decoration: none;
+	color: #000;
+}
+
+.text1 a:hover {
+	text-decoration: underline;
+	color: blue;
+}
+
+.rightText {
+	
+}
+
+.rightBody {
+	margin: 0px;
+	width: 755px;
+	height: 600px;
+}
+
+.li {
+	margin-top: 5px;
+	font-size: 14px;
+	list-style: none;
+}
+
+.time {
+	float: right;
+}
+
+.zhuti {
+	width: 950px;
+	margin-top: 30px;
+	height: 600px;
+}
+
+.midden-right {
+	float: right;
+	width: 755px;
+	height: 500px;
+	padding-left: 20px;
+}
+
+.biaoti {
+	padding: 5px;
+	padding-left: 20px;
+	width: 310px;
+	background-image: url("../images/opt_name.gif");
+}
+
+.form {
+	width: 530px;
+	height: 400px;
+	margin-top: 15px;
+}
+
+.addtopicbody {
+	width: 530px;
+	height: 400px;
+}
+
+.deletetopic{
+	width: 530px;
+}
+
+.deletebody {
+	height: 430px;
+}
+
+#opt_list {
+	list-style: none;
+	width: 160px;
+	height: 500px;
+}
+
+.frame {
+	width: 600px;
+	height: 500px;
+	border: 0px;
+	margin: 0px;
+	padding:0px;
+}
+
+.rightIf {
+	width: 759px;
+	height: 666px;
+	margin: 0px;
+	padding:0px;
+}
+
+.if {
+	width: 759px;
+	height: 666px;
+	margin: 0px;
+}
+
+.updateLi {
+	list-style: none;
+}
+
+.update:hover,.delete:hover {
+	text-decoration: underline;
+	color: gray;
+}
+
+.update,.delete {
+	text-align: right;
+}
+
+.topic {
+	width: 530px;
+	margin: 0px;
+	padding-left:8px;
+	padding-top:8px;
+}
+
+.page {
+	text-align: center;
+}

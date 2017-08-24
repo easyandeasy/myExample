@@ -1,0 +1,127 @@
+@CHARSET "UTF-8";
+body{
+	margin:0 auto;
+	padding:0px;
+	font-family: "Helvetica";
+	background-color:#f9f9f9;
+	font-size:12px;
+}
+/* 最大div */
+#userbox{
+	height:460px;
+	width:1100px;
+	margin-left:20px;
+}
+
+
+/* 显示用户信息 */
+#userinfo{
+}
+/* 信息头部 */
+#userinfotop{
+	height:30px;
+	width:1020px;
+}
+/* 头部右边 */
+#sousuoright{
+	width:238px;
+}
+#sousuoleft{
+	float:right;
+	text-align:center;
+}
+/* 头部左边 */
+#updatedelete{
+	padding:2px 0px;
+}
+
+/* 操作下的a链接样式 */
+#updatedelete a{
+	color:#000;
+	text-decoration:none;
+}
+
+/* 操作左边的图书样式  */
+img{
+	vertical-align: middle;
+}
+
+/* a链接鼠标移出移入样式 */
+#updatedelete a:hover{
+	color:blue;
+}
+
+/* 用户头部标题样式 */
+#userinfohead{
+	margin-top:10px;
+	width:1030px;
+	height:25px;
+}
+#userinfohead li{
+	float:left;
+	list-style:none;
+	background-image:url(../../book_img/gray6.png);
+	padding:4px 39px 4px 39px;
+	border-right:1px solid #ccc;
+}
+
+/* 显示用户信息样式 */
+#updatedelete{
+	float:right;
+}
+
+input{
+	background-color:#f9f9f9;
+	text-align:center;
+	border:1px solid #f9f9f9;
+}
+
+#uid{
+	width:85px;
+}
+#uname{
+	width:115px;
+}
+#uphone{
+	width:115px;
+}
+#unickname{
+	width:98px;
+}
+#uidcard{
+	width:135px;
+}
+#email{
+	width:125px;
+}
+#uindate{
+	width:105px;
+}
+#ustatus{
+	width:115px;
+}
+
+/* 信息提示框 */
+.javascripttext{
+	position: fixed;
+	top:0px;
+	left:400px;
+	border:1px solid #ccc;
+	width:120px;
+	height:16px;
+	padding:5px;
+	color:red;
+	text-align:center;
+	display:none;
+}
+
+/* 分页 */
+.userpage{
+	width:1020px;
+}
+
+#ustatus{
+background-color:#f9f9f9;
+	text-align:center;
+	border:1px solid #f9f9f9;
+}

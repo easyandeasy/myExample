@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+  <display-name></display-name>	
+  
+  
+   <resource-ref>
+		<res-ref-name>jdbc/news</res-ref-name>
+		<res-type>javax.sql.DataSource</res-type>
+		<res-auth>Container</res-auth>
+  	</resource-ref>
+  	
+	  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>doLoginServlet</servlet-name>
+    <servlet-class>com.jdbc.servlets.doLoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>doAddTopicServlet</servlet-name>
+    <servlet-class>com.jdbc.servlets.doAddTopicServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>doDeleteTopicServlet</servlet-name>
+    <servlet-class>com.jdbc.servlets.doDeleteTopicServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>HelloServlet</servlet-name>
+    <servlet-class>com.jdbc.servlets.HelloServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>doTopicDelete</servlet-name>
+    <servlet-class>com.jdbc.servlets.doTopicDelete</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>doTopicList</servlet-name>
+    <servlet-class>com.jdbc.servlets.doTopicList</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>NewsControl</servlet-name>
+    <servlet-class>com.jdbc.servlets.NewsControl</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>PageControl</servlet-name>
+    <servlet-class>com.jdbc.servlets.PageControl</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UpdatePageControl</servlet-name>
+    <servlet-class>com.jdbc.servlets.UpdatePageControl</servlet-class>
+  </servlet>
+
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>TitleServlet</servlet-name>
+    <servlet-class>com.jdbc.servlets.TitleServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>NewShow</servlet-name>
+    <servlet-class>com.jdbc.servlets.NewShow</servlet-class>
+  </servlet>
+	<servlet>
+		<servlet-name>RegisterServlet</servlet-name>
+		<servlet-class>com.jdbc.servlets.RegisterServlet</servlet-class>
+	</servlet>
+
+
+
+
+
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>doLoginServlet</servlet-name>
+    <url-pattern>/doLoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>doAddTopicServlet</servlet-name>
+    <url-pattern>/doAddTopicServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>doDeleteTopicServlet</servlet-name>
+    <url-pattern>/doDeleteTopicServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>HelloServlet</servlet-name>
+    <url-pattern>/HelloServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>doTopicDelete</servlet-name>
+    <url-pattern>/doTopicDelete</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>doTopicList</servlet-name>
+    <url-pattern>/doTopicList</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>NewsControl</servlet-name>
+    <url-pattern>/NewsControl</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PageControl</servlet-name>
+    <url-pattern>/PageControl</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdatePageControl</servlet-name>
+    <url-pattern>/UpdatePageControl</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>TitleServlet</servlet-name>
+    <url-pattern>/TitleServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>NewShow</servlet-name>
+    <url-pattern>/NewShow</url-pattern>
+  </servlet-mapping>	
+  <servlet-mapping>
+  	<servlet-name>RegisterServlet</servlet-name>
+  	<url-pattern>/RegisterServlet</url-pattern>
+  </servlet-mapping>
+  
+  
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

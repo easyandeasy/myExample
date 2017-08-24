@@ -1,0 +1,49 @@
+body{
+	margin:0px auto;
+	padding:0px;	
+	font-family: "Helvetica";
+	background-color:#f9f9f9;
+	font-size:12px;
+}
+/* 整个表单样式 */
+.adminform{
+	margin-left:300px;
+	margin-top:45px;
+}
+
+/* 表单中左边名称样式 */
+.admintoptext{
+	margin-left:360px;
+}
+
+/* 表单中td的样式 */
+.tableadmin td{
+	height:40px;
+}
+
+/* 管理员个人信息文本框样式 */
+.admintext,.textarea{
+	background-color:#f9f9f9;
+	border:0px;
+}
+
+
+/* 信息提示框 */
+.adminjavascript{
+	position: fixed;
+	top:40px;
+	left:360px;
+	border:1px solid #ccc;
+	width:120px;
+	height:16px;
+	padding:5px;
+	color:red;
+	text-align:center;
+	display:none;
+}
+
+.adminbtn{
+	background-color:#62b0ff;
+	border-radius:3px;
+	font-size:18px;
+}

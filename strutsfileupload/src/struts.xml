@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<!-- 设置临时目录 -->
+<!-- 	<constant name="struts.multipart.saveDir" value="D:\"></constant> -->
+	<!-- 设置上传文件的最大大小 	必须大于等于 maximumSize -->
+	<constant name="struts.multipart.maxSize" value="20971520"></constant>
+	<package name="default" extends="struts-default" namespace="/">
+		<action name="upload" class="com.file.Action.UploadCopyAction">
+			<!--通过param参数设置保存目录的路径-->
+			<param name="savePath">/upload/</param>
+			<result name="success">index.jsp</result>
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+			<interceptor-ref name="fileUpload">
+				<!-- 设置主传文件的大小 -->
+				<param name="maximumSize">20971520</param>
+			</interceptor-ref>
+		</action>
+		
+		
+		<action name="ognl" class="com.ognl.action.OgnlAction">
+			<result name="success">ognl.jsp</result>
+		</action>
+	</package>
+</struts>    

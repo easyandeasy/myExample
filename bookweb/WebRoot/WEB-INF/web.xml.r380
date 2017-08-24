@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+  <display-name></display-name>
+  <resource-ref>
+    <res-ref-name>jdbc/bookdb</res-ref-name>
+    <res-type>javax.sql.DataSource</res-type>
+    <res-auth>Container</res-auth>
+  </resource-ref>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UserForgetServlet</servlet-name>
+    <servlet-class>cn.bookweb.user.servlet.UserForgetServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UserLoginServlet</servlet-name>
+    <servlet-class>cn.bookweb.user.servlet.UserLoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UserRegisterServlet</servlet-name>
+    <servlet-class>cn.bookweb.user.servlet.UserRegisterServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AdminLoginServlet</servlet-name>
+    <servlet-class>cn.bookweb.admin.servlet.AdminLoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>BookServlet</servlet-name>
+    <servlet-class>cn.bookweb.book.servlet.BookServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>BookTypeServlet</servlet-name>
+    <servlet-class>cn.bookweb.booktype.servlet.BookTypeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserForgetServlet</servlet-name>
+    <url-pattern>/UserForgetServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UserLoginServlet</servlet-name>
+    <url-pattern>/UserLoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UserRegisterServlet</servlet-name>
+    <url-pattern>/UserRegisterServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminLoginServlet</servlet-name>
+    <url-pattern>/AdminLoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BookServlet</servlet-name>
+    <url-pattern>/BookServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BookTypeServlet</servlet-name>
+    <url-pattern>/BookTypeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ImageReplaceServlet</servlet-name>
+    <servlet-class>cn.bookweb.img.util.ImageReplaceServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>BookImageFileServlet</servlet-name>
+    <servlet-class>cn.bookweb.book.image.servlet.BookImageFileServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AddBookServlet</servlet-name>
+    <servlet-class>cn.bookweb.addbook.servlet.AddBookServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ImageReplaceServlet</servlet-name>
+    <url-pattern>/ImageReplaceServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BookImageFileServlet</servlet-name>
+    <url-pattern>/BookImageFileServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddBookServlet</servlet-name>
+    <url-pattern>/AddBookServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>SelectUserNameServlet</servlet-name>
+    <servlet-class>cn.bookweb.user.servlet.SelectUserNameServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>BaseServlet</servlet-name>
+    <servlet-class>cn.bookweb.user.servlet.BaseServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AddBookTextServlet</servlet-name>
+    <servlet-class>cn.bookweb.addbook.servlet.AddBookTextServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SelectBookServlet</servlet-name>
+    <servlet-class>cn.bookweb.selectbook.servlet.SelectBookServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SelectsBookServlet</servlet-name>
+    <servlet-class>cn.bookweb.selectbook.servlet.SelectsBookServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>BookSendServlet</servlet-name>
+    <servlet-class>cn.bookweb.book.servlet.BookSendServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SelectBookInfoLike</servlet-name>
+    <servlet-class>cn.bookweb.book.servlet.SelectBookInfoLike</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UpdateBookInfoServlet</servlet-name>
+    <servlet-class>cn.bookweb.updatebook.servlet.UpdateBookInfoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DeleteBookInfoServlet</servlet-name>
+    <servlet-class>cn.bookweb.updatebook.servlet.DeleteBookInfoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>BookTypeFindServlet</servlet-name>
+    <servlet-class>cn.bookweb.booktype.servlet.BookTypeFindServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>BookTypeDeleteServlet</servlet-name>
+    <servlet-class>cn.bookweb.booktype.servlet.BookTypeDeleteServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>BookTypeAddServlet</servlet-name>
+    <servlet-class>cn.bookweb.booktype.servlet.BookTypeAddServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>BookTypeIsAddServlet</servlet-name>
+    <servlet-class>cn.bookweb.booktype.servlet.BookTypeIsAddServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DeletebigBookTypeServlet</servlet-name>
+    <servlet-class>cn.bookweb.booktype.servlet.DeletebigBookTypeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LeftTypeServlet</servlet-name>
+    <servlet-class>cn.bookweb.booktype.servlet.LeftTypeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UpdateBookTypeServlet</servlet-name>
+    <servlet-class>cn.bookweb.booktype.servlet.UpdateBookTypeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>BookTypeIsUpdateServlet</servlet-name>
+    <servlet-class>cn.bookweb.booktype.servlet.BookTypeIsUpdateServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>BookTypeUpdateServlet</servlet-name>
+    <servlet-class>cn.bookweb.booktype.servlet.BookTypeUpdateServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>OrderInfoServlet</servlet-name>
+    <servlet-class>cn.bookweb.order.servlet.OrderInfoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UpdateBookHlframeServlet</servlet-name>
+    <servlet-class>cn.bookweb.updatebook.servlet.UpdateBookHlframeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SelectOrderInfoServlet</servlet-name>
+    <servlet-class>cn.bookweb.order.servlet.SelectOrderInfoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UserBuyBookServlet</servlet-name>
+    <servlet-class>com.bookweb.buybook.servlet.UserBuyBookServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>BookPassIDqueryInfoServlet</servlet-name>
+    <servlet-class>cn.bookweb.book.servlet.BookPassIDqueryInfoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>BookSelectAllServlet</servlet-name>
+    <servlet-class>cn.bookweb.book.servlet.BookSelectAllServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SelectUserNameServlet</servlet-name>
+    <url-pattern>/SelectUserNameServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BaseServlet</servlet-name>
+    <url-pattern>/BaseServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddBookTextServlet</servlet-name>
+    <url-pattern>/AddBookTextServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SelectBookServlet</servlet-name>
+    <url-pattern>/SelectBookServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SelectsBookServlet</servlet-name>
+    <url-pattern>/SelectsBookServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BookSendServlet</servlet-name>
+    <url-pattern>/BookSendServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SelectBookInfoLike</servlet-name>
+    <url-pattern>/SelectBookInfoLike</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateBookInfoServlet</servlet-name>
+    <url-pattern>/UpdateBookInfoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteBookInfoServlet</servlet-name>
+    <url-pattern>/DeleteBookInfoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BookTypeFindServlet</servlet-name>
+    <url-pattern>/BookTypeFindServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BookTypeDeleteServlet</servlet-name>
+    <url-pattern>/BookTypeDeleteServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BookTypeAddServlet</servlet-name>
+    <url-pattern>/BookTypeAddServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BookTypeIsAddServlet</servlet-name>
+    <url-pattern>/BookTypeIsAddServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeletebigBookTypeServlet</servlet-name>
+    <url-pattern>/DeletebigBookTypeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LeftTypeServlet</servlet-name>
+    <url-pattern>/LeftTypeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateBookTypeServlet</servlet-name>
+    <url-pattern>/UpdateBookTypeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BookTypeIsUpdateServlet</servlet-name>
+    <url-pattern>/BookTypeIsUpdateServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BookTypeUpdateServlet</servlet-name>
+    <url-pattern>/BookTypeUpdateServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OrderInfoServlet</servlet-name>
+    <url-pattern>/OrderInfoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateBookHlframeServlet</servlet-name>
+    <url-pattern>/UpdateBookHlframeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SelectOrderInfoServlet</servlet-name>
+    <url-pattern>/SelectOrderInfoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UserBuyBookServlet</servlet-name>
+    <url-pattern>/UserBuyBookServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BookPassIDqueryInfoServlet</servlet-name>
+    <url-pattern>/BookPassIDqueryInfoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BookSelectAllServlet</servlet-name>
+    <url-pattern>/BookSelectAllServlet</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>login.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

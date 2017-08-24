@@ -1,0 +1,96 @@
+/**设置全部边距为零*/
+*{
+	padding: 0px;margin: 0px;font-size: 12px;font-family: "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑";
+}
+
+.bos-sum{
+	border:0px solid blue;height:560px;width:1347px;
+}
+
+.img-top-1{
+	border:0px solid red;width:150px;height:170px;float:left;margin:10px 0px 0px 9px;border:1px solid #fff;
+	transition: all 0.8s;
+}
+.img-top-1:hover{
+	transform: scale(0.9,0.9);
+}
+
+.div-book-1{
+	height: 35px;float:left;
+    margin: 10px 0px 0px 0px;
+    font-size: 14px;
+    text-align: left;
+    width:170px;border-top:1px solid #cdcdcd;
+}
+
+/**/
+.biv-img-box{
+	width:340px;height:460px;transition: all 0.8s;padding:0px;margin:0px;transition: all 0.8s;
+}
+.biv-img-box:hover{
+	transform: scale(1.1);
+}
+
+ 
+ /*设置新品最大div样式*/
+.box-xinpin-1{
+	height:500px;width:1038px;border:0px solid #cdcdcd;float:left;margin:20px 0px 0px 160px;
+}
+
+/*设置新品上市文字颜色及内边距*/
+.box-xinpin-2{
+	height:40px;width:1023px;border:1px solid #232323;float:left;margin:20px 0px 0px 100px;
+	background:#232323;float:left;margin:0px 0px 0px 0px;
+	font-size: 18px;font-weight: bold;color: white;line-height: 40px;padding-left:10px;
+}
+.chengxu-box{
+	font-size: 16px;font-weight: bold;color: white;line-height: 40px;text-decoration: none;
+	float:right;margin-right:10px;
+}
+.chengxu-box:hover{
+	text-decoration:underline;color:#ed155b;
+}
+ 
+
+/*设置*/
+.box-xinpin-3{
+	height:230px;width:170px;border:1px solid #ccc;float:left;margin:0px 0px 0px 0px;border-top:0px;
+}
+
+.box-xinpin-4{
+	height:230px;width:170px;border:1px solid #ccc;float:left;margin:230px 0px 0px -172px;
+	border-top:0px;
+}
+
+.box-xinpin-5{
+	height:460px;width:340px;border:1px solid #ccc;float:left;margin:230px 0px 0px 0px;
+	border-top:0px;float:left;margin:0px;border-left:0px;border-right:0px;
+	text-align: center;overflow: hidden;
+}
+
+.box-xinpin-fulei{
+	text-align: center;
+}
+
+.box-xinpin-6{
+	width:260px;height:229px;border:1px solid #ccc;float:left;margin:0px;border-right:0px;
+}
+
+.box-xinpin-7{
+	width:260px;height:229px;border:1px solid #ccc;float:left;margin:0px;
+}
+
+.box-xinpin-8{
+	width:260px;height:229px;border:1px solid #ccc;float:left;margin:0px;border-top:0px;border-right:0px;
+}
+
+.box-xinpin-9{
+	width:260px;height:229px;border:1px solid #ccc;float:left;margin:0px;border-top:0px;
+}
+
+.img-xinpin-box{
+	transition: all 0.8s;float:left;margin:0px 0px 0px 28px;margin-top:10px;	
+}
+.img-xinpin-box:hover{
+	transform: scale(0.9,0.9);
+}

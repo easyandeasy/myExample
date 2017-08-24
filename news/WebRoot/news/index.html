@@ -1,0 +1,121 @@
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c" %>
+<%@page import="com.jdbc.entity.Topic"%>
+<%@page import="com.jdbc.entity.News"%>
+<%@page import="com.jdbc.topicsdaoImpl.NewsDaoImpl"%>
+<%@page import="com.jdbc.newsdao.INewsDao"%>
+
+<!DOCTYPE html>
+<html>
+  <head>
+  	  <base href="<%=basePath%>">
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+  <script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript">
+	function autoclick(){
+ 		lnk = document.getElementById("one");
+ 		lnk.click();
+	}
+</script> 
+  </head>
+  
+  <body onload="autoclick()">
+     	 <div class="right-head">
+      		<img src="images/class_type.gif" class="rightimg" />
+      	</div>
+		<div class="text-head">
+   				<div  class="text-head-one">
+   					 <c:forEach items="${list }" var="topics" varStatus="status">
+   					 	<c:if test="${status.index==11}">
+   					 		<p></p>
+   					 	</c:if>
+   					 	<c:if test="${!topics.tname.equals('其他')}">
+   					 		<a href="PageControl?id=${topics.tid}" target="if" title="${topics.tname}">${topics.tname}</a>
+   					 	</c:if>
+   					 </c:forEach>
+   					 <a href="PageControl?id=16" title="其他" id="one" target="if">其他</a>
+   				</div>
+   				<hr />
+   				<div class="rightIf" id="if">
+   					<div class="text1">
+	   					<iframe name="if" class="if">
+	   						
+	   					
+	   					</iframe>
+     				</div>
+   				</div>
+   		</div>
+
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <!--  <%
+   		List<Topic> list7 = (List<Topic>)session.getAttribute("list");
+   		List<News> list13 = (List<News>)session.getAttribute("lists");
+     %> -->
+     
+
+
+
+
+<!-- <%
+   						int i= 0;
+   						for(Topic top : list7){
+   							
+   							i++;
+   							if(i==12){
+   								out.print("<p></p>");
+   							}
+   							if(!top.getTname().equals("其他")){
+   					 %>
+   					<a href="PageControl?id=<%=top.getTid() %>" target="if" title="<%=top.getTname() %>"><%=top.getTname() %></a>
+   					 
+   					 <%}
+   					 } %> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

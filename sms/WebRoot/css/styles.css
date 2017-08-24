@@ -1,0 +1,50 @@
+
+/* login中的css */
+body{
+	background-image: url(../images/leng.PNG);
+}
+.center{
+	height:330px;
+	padding-top:110px;
+}
+
+table{
+	font-size:25px;
+}
+
+td{
+	padding:5px;
+}
+
+.form{
+	margin-top:80px;
+}
+
+h1{
+	color:gray;
+	width:260px;
+}
+
+.input{
+	font-size:20px;
+}
+
+.loginbtn{
+	font-size:23px;
+	width:225px;
+	border:1px;
+}
+
+.regis{
+	margin-top:80px;
+}
+
+a{
+	text-decoration:none;
+}
+a:hover{
+	color:gray;
+	text-decoration:underline;
+}
+/* register中的css */
+ 

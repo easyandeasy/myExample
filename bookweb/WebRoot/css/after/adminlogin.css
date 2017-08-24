@@ -1,0 +1,73 @@
+
+/* 管理员登录窗体 */
+
+/* 设置整个窗体的边距都为 0 */
+.admin{
+	margin:0px;
+	padding:0px;
+}
+
+/* 登录窗体的背景图片 */
+.admin{
+	background-image: url(../../book_img/after.PNG) ;
+}
+
+/* 登录图片的宽度高度和背景图片 */
+.div{
+	border:1px solid #000;
+	width:800px;
+	height:600px;
+	background: url(../../book_img/admin.jpg) repeat-x ;
+}
+
+/* 登录输入框的样式 无边框、透明、字体大小 */
+.input{
+	border:0px;
+	BACKGROUND-COLOR: transparent;
+	font-size:15px;	
+}
+
+
+
+/* 错误提示样式 */
+#form{
+	margin-top:182px;
+}
+
+/* 设置帐号输入框的位置 */
+#text{
+	margin-top:20px;
+	margin-left:50px;
+	width:120px;
+}
+
+/* 设置密码输入框的位置 */
+#pwd{
+	margin-top:20px;
+	margin-left:50px;
+	width:120px;
+}
+
+/* 设置登录按钮的样式 */
+.sub{
+	border:0px;
+	background-color: transparent;
+	font-size:80px;
+	width:80px;
+	height:30px;
+	margin-left:-16px;
+}
+
+/* 忘记密码链接样式  */
+#forget{
+	margin-top:162px;
+}
+a{
+	color:#000;
+	font-weight:bolder;
+	text-decoration:none;
+}
+a:hover{
+	text-decoration:underline;
+	color:blue;
+}

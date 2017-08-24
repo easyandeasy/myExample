@@ -1,0 +1,109 @@
+body{
+	background-color:#f9f9f9;
+}
+
+/* 上传文件按钮样式 */
+#bigFileImg{
+	display:none;
+}
+
+/* 包含pricture 和 forms 的div样式 */
+.bigbox{
+	height:600px;
+}
+
+/* 图片框样式 */
+.picture{
+	width:350px;
+	height:350px;
+	border:1px solid #f0f0f0;
+	margin-left:20px;
+	box-shadow:0 0 4px #000;
+}
+
+/* 表单样式 */
+.forms{
+	border:1px solid gray;
+	border-right:0px;
+	border-top:0px;
+	border-bottom:0px;
+	width:700px;
+	height:470px;
+	float:right;
+}
+
+/* 添加图片按钮 */
+.btnimg{
+	margin-left:145px;
+	margin-top:10px;
+	border-radius:3px;
+}
+
+/* 提交按钮样式  */
+.button{
+	background-image:url(../../book_img/hong_2_btn.jpg);
+	padding:5px 45px 5px 45px;
+	border-radius:4px;
+	color:#fff;
+}
+.hlframe{
+	background-image:url(../../book_img/hong_2_btn.jpg);
+	padding:5px 45px 5px 45px;
+	border-radius:6px;
+	border:1px solid red;
+	color:#fff;
+	text-decoration:none;
+	
+}
+.btn{
+	background-image:url(../../book_img/hong_1_btn.jpg);
+}
+
+/* 表单样式 */
+table{
+	margin-left:20px;
+}
+td{
+	height:40px;
+	text-align:right;
+}
+
+.td{
+	text-align:left;
+	width:260px;
+}
+
+/* 表单中的窗体居左 */
+.tdtype{
+	text-align:left;
+}
+
+/* 下拉框字体居中 */
+select{
+	text-align:center;
+}
+
+
+/* 提交按钮样式 */
+.submitth{
+	height:90px;
+	text-align:right;
+}
+
+
+/* 删除修改按钮样式 */
+.buttonth{
+	height:90px;
+	text-align:center;
+}
+#update{
+	margin-left:20px;
+}
+
+#publishtime,#printtime{
+	cursor:default;
+}
+
+.bname{
+	width:550px;
+}

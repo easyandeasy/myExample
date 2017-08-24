@@ -1,0 +1,55 @@
+.box-top{
+	border:solid 0px blue;width:1347px;height:1290px;overflow:hidden;
+}
+.box-top-1{
+	border:solid 0px #f7f7f7;width:1130px;height:1290px;margin:10px 0px 0px 110px;overflow:hidden;
+}
+a input{
+	background:#ed145b;color:#fff;border:0px;width:62px;height:25px;
+	cursor: pointer;margin-left:4px;margin-top:4px;border:solid 1px #ed145b;
+}
+.box-top-4{
+	border:solid 1px #f0f0f0;border-top:0px;
+}
+.box-top-4 a{
+	text-decoration: none;
+}
+.box-top-4 input{
+	margin-bottom:7px;margin-left:25px;
+}
+
+.a-order{
+	text-decoration:none;float:left;margin:20px 0px 0px 20px;
+}
+.a-order-1{
+	text-decoration:none;float:left;margin:20px 0px 0px 410px;
+}
+.pages-span{
+	float:left;margin:6px 0px 0px 600px;
+}
+
+/* 每本图书信息样式 */
+.bookinfo{
+	float:left;
+	margin-top:10px;
+	margin-right:5px;
+	border:1px #f0f0f0 solid ;
+	margin-left:10px;
+	border-bottom:0px;
+}
+#bookinfo0,#bookinfo1,#bookinfo2,#bookinfo3,#bookinfo4{
+	margin-top:0px;
+}
+table{
+	border:1px solid #f9f9f9;border-bottom:0px;
+}
+tr{
+	font-size:12px;
+}
+
+.bookinfo:hover{
+ 	box-shadow:0px 0px 10px #e5e5e5;border-color:#e1e1e1;
+}
+.box-top-2:hover{
+	box-shadow:0px 0px 10px #e5e5e5;border-color:#e1e1e;
+}

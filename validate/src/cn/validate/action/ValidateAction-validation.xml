@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC
+        "-//Apache Struts//XWork Validator 1.0.3//EN"
+       "http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+ <validators>
+ 	<!-- 用户名 -->
+ 	<field name="name">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message key="uname">用户名不能为空</message>
+		</field-validator>
+		<field-validator type="stringlength">
+			<param name="maxLength">10</param>
+			<param name="minLength">6</param>
+			<message>用户名长度必须在${minLength}和${maxLength}之间</message>
+		</field-validator>
+	</field>
+	
+	<!-- 密码 -->
+	<field name="pwd">
+		<field-validator type="requiredstring">
+			<message>密码不能为空</message>
+		</field-validator>
+		<field-validator type="stringlength">
+			<param name="minLength">6</param>
+			<message>密码长度必须大于等于${minLength}</message>
+		</field-validator>
+	</field>
+	
+	<!-- 确认密码 -->
+	<field name="repwd">
+		<field-validator type="requiredstring">
+			<message>确认密码不能为空</message>
+		</field-validator>
+		<field-validator type="fieldexpression">
+			<param name="expression">pwd == repwd</param>
+			<message>密码和确认密码必须相同</message>
+		</field-validator>
+	</field>
+	
+	<!--     邮箱 -->
+    <field name="email">  
+        <field-validator type="requiredstring">  
+            <param name="trim">true</param>  
+            <message>邮箱不能为空</message>  
+        </field-validator>  
+        <field-validator type="email">  
+  		<!-- 	<param name="regex"><![CDATA[^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$]]></param> -->
+            <message>邮箱格式不正确</message>  
+        </field-validator>  
+    </field>  
+	
+	<!-- 年龄 -->
+	<field name="age">  
+        <field-validator type="requiredstring">  
+            <param name="trim">true</param>  
+            <message>年龄不能为空</message>  
+        </field-validator>  
+        <field-validator type="int">  
+            <param name="minExpression">0</param>  
+            <param name="maxExpression">200</param>  
+            <message>年龄范围在0-200之间</message>  
+        </field-validator>  
+    </field>  
+    
+	<!-- 出生日期 -->
+    <field name="dates">  
+        <field-validator type="requiredstring">  
+            <param name="trim">true</param>  
+            <message>日期不能为空</message>  
+        </field-validator>  
+        <field-validator type="date">   
+            <message>日期格式不正确</message>  
+        </field-validator>  
+    </field>  
+    
+    <!-- 身份证号 -->
+     	<field name="card">
+		<!-- 
+			
+			(1)expression：给出正则表达式；格式如：<![CDATA[(正则表达式)]]>
+
+			(2)caseSensitive：是否区分大小写； 
+		 -->
+		
+		<field-validator type="regex">
+			<param name="expression"><![CDATA[(^[1-9]([0-9]{14}|[0-9]{17})$)]]></param>
+			<message>格式不正确！</message>
+		</field-validator>
+		<!-- 验证输入框是否为空 -->
+ 		<field-validator type="requiredstring">
+ 			<param name="trim">true</param>
+ 			<message>用户名不能为空！</message>
+ 		</field-validator>
+ 		<!-- 验证输入字符串的长度 （去掉两边的空格后的长度） -->
+ 		<field-validator type="stringlength">
+ 			<param name="trim">true</param>
+ 			<param name="maxLength">18</param>
+ 			<param name="minLength">18</param>
+ 			<message>身份证号长度必须为${minLength}</message>
+ 		</field-validator>
+	</field> 
+	
+	<!-- 电话号码 -->
+	<field name="phone">
+		<field-validator type="requiredstring">
+			<message>电话号码不能为空</message>
+		</field-validator>
+		<field-validator type="regex">
+			<param name="regex"><![CDATA[^(\d{3,4}-){0,1}(\d{7,8})$]]></param>
+			<message>电话号码格式不正确</message>
+		</field-validator>
+	</field>
+    
+ 	
+ </validators>

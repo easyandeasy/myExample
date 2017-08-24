@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="cn.hibernate.entity">
+	<class name="Student">
+		<id name="id">
+			<generator class="native"></generator>
+		</id>
+		<property name="name"/>
+		<property name="age"/>
+		<!-- 多对一关系  name表示属性名     class表示属性对应的类    column表示数据库中的列名   foreign-key表示外键的名称-->
+		<many-to-one name="grade" class="Grade" column="grade_id" foreign-key="fk_grade"/>
+	</class>
+</hibernate-mapping> 

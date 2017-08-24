@@ -1,0 +1,107 @@
+/*找回密码验证成功 让用户修改密码*/
+.span-1{
+	float:left;font-family:宋体;font-size:20px;color:#28c873;margin:15px 0px 0px 5px;
+}
+.img-1{
+	float:left;margin:3px 0px 0px 60px;height:40px;width:50px;
+}
+.box-1{
+	margin-top:50px;
+}
+
+/*设置登录框样式*/
+.box2{
+	border: 1px solid #d0d0d0;background-color: #fff;height:500px;
+	width:300px;float:left;margin:69px 0px 0px 0px;border-left:1px dashed #d0d0d0;
+}
+.input{
+	float:left;border:0px solid #d0d0d0;margin:50px 0px 0px 48px;width:200px;height:40px;border-radius:9px;
+	background-color:#62B0FF;color:#fff;font-size: 15px;
+}
+
+
+/*输入密码文本框样式*/
+.input1{
+	float:left;width:280px;height:42px;border:1px solid #d0d0d0;border-left:0px;margin:30px 0px 0px 0px;font-size: 15px;
+}
+.span1{
+	float:left;margin:30px 0px 0px 55px;width:40px;height:40px;text-align:center;border:1px solid #d0d0d0;
+	border-right: 0px;
+}
+
+/*确认密码文本框样式*/
+.input2{
+	float:left;width:280px;height:42px;border:1px solid #d0d0d0;border-left:0px;margin:40px 0px 0px 0px;font-size: 15px;
+}
+.span2{
+	float:left;margin:40px 0px 0px 55px;width:40px;height:40px;text-align:center;border:1px solid #d0d0d0;
+	border-right: 0px;
+}
+
+/*验证码文本框样式*/
+.span3{
+	float:left;margin:30px 0px 0px 55px;width:40px;height:40px;text-align:center;border:1px solid #d0d0d0;
+	border-right: 0px;
+}
+.input3{
+	float:left;width:200px;height:42px;border:1px solid #d0d0d0;border-left:0px;margin:30px 0px 0px 0px;font-size: 15px;
+}
+
+/*设置随机验证码div样式*/
+.huan{
+	border:solid 1px #d0d0d0;border-left:0px;width:80px;height:40px;float:left;margin-top:30px;
+}
+
+/*设置超链接换一张的样式*/
+.huanyizhang{
+	text-decoration:none;font-size:15px;color:#666;float:left;margin:-19px 0px 0px 385px;
+}
+
+/*框内图片样式*/
+.img1{
+	padding-top:12px;
+}
+
+/*提交按钮样式*/
+.regist{
+	float:left;border:0px solid #d0d0d0;margin:30px 0px 0px 55px;width:322px;height:40px;border-radius:9px;
+	background-color:#62B0FF;color:#fff;font-size: 16px;
+}
+
+/*错误信息显示样式*/
+.error{
+	position:absolute;left:340px;color:red;font-family:宋体;font-size:14px;margin-top:5px;
+}
+
+/**设置找回密码成功后div中的样式*/
+.input-1{
+	float:left;border:0px solid #d0d0d0;margin:40px 0px 0px -20px;width:322px;height:40px;border-radius:9px;
+	background-color:#62B0FF;color:#fff;font-size: 16px;
+}
+.span-1{
+	float:left;font-family:宋体;font-size:20px;color:#28c873;margin:30px 0px 0px 0px;
+}
+.img-ss{
+	float:left;margin:3px 0px 0px 115px;height:80px;width:80px;
+}
+.a-1{
+	text-decoration:none;
+}
+.byt{
+	margin-top:120px;
+}
+.img-1{
+	float:left;
+	margin:20px 0px 0px 40px;
+}
+
+/*js 样式*/
+.zhuce{
+	background: #28c873;cursor:pointer;/*改变鼠标样式 移入变成一只手*/
+}
+.chao{
+	text-decoration:underline;color:#28c873
+}
+.ppoooo{
+	background:#55abe8;cursor:pointer;
+}

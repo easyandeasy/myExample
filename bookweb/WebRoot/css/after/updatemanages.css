@@ -1,0 +1,108 @@
+@CHARSET "UTF-8";
+body{
+	margin:0 auto;
+	padding:0px;
+	font-family: "Helvetica";
+	background-color:#f9f9f9;
+	font-size:12px;
+}
+/* 最大div */
+#adminbox{
+	height:460px;
+	width:1080px;
+	margin-left:20px;
+}
+
+/* 显示用户信息 */
+#admininfo{
+	margin-left:150px;
+	width:670px;
+	height:380px;	
+}
+/* 信息头部 */
+#admininfotop{
+	height:30px;
+	width:1020px;
+	margin-left:180px;
+}
+
+/* 头部左边 */
+#updatedelete{
+	text-align:center;
+}
+
+/* 操作下的a链接样式 */
+#updatedelete a,.adminpage a{
+	color:#000;
+	text-decoration:none;
+	border:1px solid #f9f9f9;
+	padding:0px 3px;
+}
+
+/* 操作左边的图书样式  */
+img{
+ 	vertical-align: middle;
+}
+
+/* a链接鼠标移出移入样式 */
+#updatedelete a:hover,.adminpage a:hover{
+	color:blue;
+}
+
+/* 用户头部标题样式 */
+#admininfohead{
+	margin-top:35px;
+	width:1030px;
+	height:25px;
+}
+#admininfohead li{
+	float:left;
+	list-style:none;
+	background-image:url(../../book_img/gray6.png);
+	padding:4px 42px 4px 42px;
+	border-right:1px solid #ccc;
+}
+
+#selectuservalue{
+	text-align:left;
+}
+input{
+	background-color:#f9f9f9;
+	text-align:center;
+	border:1px solid #f9f9f9;
+}
+
+#adminid{
+	width:100px;
+}
+#adminname{
+	width:100px;
+}
+#adminpwd{
+	width:100px;
+}
+#adminidcard{
+	width:140px;
+}
+#admincontext{
+	width:110px;
+}
+
+/* 信息提示框 */
+.javascripttext{
+	position: fixed;
+	top:30px;
+	left:380px;
+	border:1px solid #ccc;
+	width:120px;
+	height:16px;
+	padding:5px;
+	color:red;
+	text-align:center;
+	display:none;
+}
+
+/* 分页 */
+.adminpage{
+	width:680px;
+}

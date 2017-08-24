@@ -1,0 +1,95 @@
+package com.bookweb.buybook.servlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import cn.bookweb.book.buycar.entity.Buycar;
+import cn.bookweb.book.buycar.service.BuycarService;
+import cn.bookweb.book.buycar.serviceimpl.IBuycarServiceImpl;
+import cn.bookweb.book.entity.Book;
+import cn.bookweb.rundom.util.CommonUtil;
+import cn.bookweb.user.entity.User;
+import cn.bookweb.user.service.IUserService;
+import cn.bookweb.user.serviceimpl.UserServiceImpl;
+/**
+ * 立即购买用户控制器
+ * @author Happy
+ *
+ */
+@SuppressWarnings("serial")
+public class UserNowBuycarServlet extends HttpServlet {
+
+	private IUserService iuser = new UserServiceImpl();
+	private BuycarService buycar = new IBuycarServiceImpl();
+
+	public void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		doPost(request,response);
+	}
+
+	public void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		//设置用户请求编码，设置响应编码
+		request.setCharacterEncoding("utf-8");
+		response.setContentType("text/html;charset=utf-8");
+
+		String unickName=request.getParameter("name");
+
+		PrintWriter out = response.getWriter();
+		if(unickName==""){
+			out.print("<script type='text/javascript'>var f=confirm('亲，你还没有登录，点击确定前往登录~~');if(f==true){location.href='/bookweb/jsp/before/login.jsp'}else{location.href='/bookweb/jsp/before/shopping-head.jsp'};</script>");
+		}else{
+
+			User users =(User)request.getSession().getAttribute("userSession");
+
+			//获取用户id
+			User user = new User();
+			user.setUname(users.getUname());
+			Book book = new Book();
+			CommonUtil comm= new CommonUtil();
+			String uuid=comm.uuid();
+			//获取用户id
+			int uid=iuser.queryUserNameId(user);
+
+			//获取图书id
+			int bid=0;
+
+			bid=Integer.parseInt(request.getParameter("bid"));
+
+			user.setUid(uid);
+			book.setBid(bid);
+
+			if(uid!=0){
+				//判断用户加入购物车是否存在该书如果存在则加数量
+				if(buycar.queryUseBookRowCountBuycar(bid,uid)==bid){
+					int sums=buycar.queryUserBookBuycarNumbertity(bid,uid);
+					++sums;
+					buycar.replaceUserBookBuycar(sums,bid,uid);
+				}else{
+					//执行添加购物车
+					buycar.addUserBookBuycar(uuid,1,book,user);
+				}
+
+				//获取用户购物车总数量
+				int buycarCount = buycar.queryUserBookCountBuycar(uid);
+				
+				/**
+				 * 查询当前用户购物车
+				 */
+				List<Buycar> list = new ArrayList<Buycar>();
+				list=buycar.queryUserBookBuycar(user,list);
+				request.getSession().setAttribute("buycarUserBook",list);
+
+				request.getSession().setAttribute("userBuycarCount",buycarCount);
+				request.getRequestDispatcher("/jsp/before/usercenter.jsp").forward(request,response);
+			}
+		}
+	}
+}

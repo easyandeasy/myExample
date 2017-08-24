@@ -1,0 +1,124 @@
+
+/*忘记密码网页样式*/
+
+/*设置网页内外边距为0*/
+.bod{
+	margin:0px;padding:0px;
+}
+
+/*设置第一个盒子的背景图片和高度宽度*/
+.box{
+	background: url(/bookweb/images/registinfo.jpg) no-repeat;
+	height:100%;width:100%;
+}
+
+/*设置找回密码盒子的样式*/
+.box1{
+	border: 1px solid #d0d0d0;height:500px;width:650px;background-color: #fff;float:left;
+	margin:70px 0px 0px -530px;border-top:0px;border-right:0px;
+}
+
+/*设置登录框样式*/
+.box2{
+	border: 1px solid #d0d0d0;background-color: #fff;height:500px;
+	width:300px;float:left;margin:69px 0px 0px 0px;border-left:1px dashed #d0d0d0;
+}
+.input{
+	float:left;border:0px solid #d0d0d0;margin:50px 0px 0px 48px;width:200px;height:40px;border-radius:9px;
+	background-color:#62B0FF;color:#fff;font-size: 15px;
+}
+
+/*设置找回密码文本样式*/
+.box3{
+	border: 1px solid #d0d0d0;background-color: #fff;height:50px;
+	width:210px;float:left;margin:19px 0px 0px 70px;border-bottom: 0px;
+}
+.span{
+	font-size: 20px;color:#28c873;float:left;padding-top:10px;padding-left:29px;
+}
+
+/*邮箱文本框样式*/
+.input1{
+	float:left;width:280px;height:42px;border:1px solid #d0d0d0;border-left:0px;margin:30px 0px 0px 0px;font-size: 15px;
+}
+.span1{
+	float:left;margin:30px 0px 0px 160px;width:40px;height:40px;text-align:center;border:1px solid #d0d0d0;
+	border-right: 0px;
+}
+
+/*用户名文本框*/
+.input2{
+	float:left;width:280px;height:42px;border:1px solid #d0d0d0;border-left:0px;margin:130px 0px 0px 0px;font-size: 15px;
+}
+.span2{
+	float:left;margin:130px 0px 0px 160px;width:40px;height:40px;text-align:center;border:1px solid #d0d0d0;
+	border-right: 0px;
+}
+
+/*验证码文本框样式*/
+.span3{
+	float:left;margin:30px 0px 0px 160px;width:40px;height:40px;text-align:center;border:1px solid #d0d0d0;
+	border-right: 0px;
+}
+.input3{
+	float:left;width:200px;height:42px;border:1px solid #d0d0d0;border-left:0px;margin:30px 0px 0px 0px;font-size: 15px;
+}
+
+/*设置随机验证码div样式*/
+.huan{
+	border:solid 1px #d0d0d0;border-left:0px;width:80px;height:40px;float:left;margin-top:30px;
+}
+
+/*设置超链接换一张的样式*/
+.huanyizhang{
+	text-decoration:none;font-size:15px;color:#666;float:left;margin:-17px 0px 0px 490px;
+}
+
+/*框内图片样式*/
+.img1{
+	padding-top:12px;
+}
+
+/*提交按钮样式*/
+.regist{
+	float:left;border:0px solid #d0d0d0;margin:30px 0px 0px 160px;width:322px;height:40px;border-radius:9px;
+	background-color:#62B0FF;color:#fff;font-size: 16px;
+}
+
+/*设置找回密码样式*/
+.img3{
+	float:left;width:100px;height:30px;margin:28px 0px 0px 340px;
+}
+
+/*错误信息显示样式*/
+.error{
+	position:absolute;left:356px;color:red;font-family:宋体;font-size:15px;
+}
+
+/*注册成功后的样式*/
+.addspan{
+	float:left;font-family:宋体;font-size:20px;color:#28c873;margin:20px 0px 0px 0px;
+}
+.denglu{
+	float:left;border-radius:10px;width:180px;height:35px;
+	color:#fff;background:#28c873;border:0px;margin:40px 0px 0px -197px;
+}
+.mings{
+	float:left;margin:3px 0px 0px 200px;height:50px;width:60px;
+}
+.asp{
+	text-decoration: none;
+}
+.ssmdiv{
+	margin-top:190px;
+}
+
+
+/*js 样式*/
+.zhuce{
+	background: #55abe8;
+	cursor:pointer;/*改变鼠标样式 移入变成一只手*/
+}
+.chao{
+	text-decoration:underline;color:#28c873
+}

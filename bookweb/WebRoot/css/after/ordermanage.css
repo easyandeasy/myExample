@@ -1,0 +1,114 @@
+body{
+	font-size:12px;
+	margin:0px auto;
+	padding:0px;	
+	font-family: "Helvetica";
+}
+
+/* 订单头部样式 */
+.ordertop{
+	width:500px;
+	height:20px;
+}
+
+.ordertopright{
+	float:right;
+	width:325px;
+}
+/* 订单类型 链接样式 */
+.ordertop a{
+	padding:3px 10px 3px 10px;
+	margin-left:15px;
+}
+
+/* 订单标题 */
+.orderinfotops{
+	border:1px solid #f0f0f0;
+	width:1000px;
+	height:21px;
+	padding:10px;
+	margin-top:10px;
+	margin-bottom:10px;
+	background-color:#f0f0f0;
+}
+
+.orderinfotops li{
+	float:left;
+	list-style:none;
+}
+
+/* 商品 */
+.orderbnametops{
+	width:320px;
+	text-align:center;
+}
+
+/* 单价 */
+.price,.num,.shiprice,.status,.chaozuo{
+	width:121px;
+	text-align:center;
+	padding-top:20px;
+	height:64px;
+	border-left:1px solid #f0f0f0;
+}
+.pricetops,.numtops,.shipricetops,.statustops,.chaozuotops{
+	margin-left:95px;
+}
+
+/* 订单信息 */
+.ordertop1{/* 订单信息头部 */
+	width:1020px;
+	height:25px;
+	background-color:#f0f0f0;
+}
+.orderinfo1{/* 订单详情信息 */
+	border-top:0px;
+	height:85px;
+	width:1020px;
+}
+.images{
+	margin-left:38px;
+}
+.bnames{
+	margin-left:38px;
+	width:221px;
+}
+.orderinfo1 li{
+	list-style:none;
+	float:left;
+}
+.orderinfos{
+	margin-top:10px;
+}
+
+
+/* 所有订单 */
+.orderinfos{
+	width:1020px;
+	border:2px solid #f0f0f0;
+}
+
+
+/* 订单信息框样式 */
+.orders{
+	height:400px;
+	width:1020px;
+}
+
+/* 分页 */
+.orderspage{
+	width:1020px;
+}
+
+/* a链接样式 */
+a{
+	text-decoration:none;
+}
+a:hover{
+	text-decoration:underline;
+}
+
+
+.orderinfos:hover{
+	border:2px solid #ccc;
+}

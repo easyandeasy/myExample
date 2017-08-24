@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<constant name="struts.custom.il8n.resources" value="message"/>
+	<constant name="struts.il8n.encoding" value="UTF-8"/>
+	<package name="default" extends="struts-default" namespace="/">
+		<action name="validate01" class="cn.validate.action.ValidateAction">
+			<result name="success">success.jsp</result>
+			<result name="input">error.jsp</result>
+		</action>
+		
+		<action name="helloword" class="cn.validate.action.HelloWordAction">
+			<result>index.jsp</result>
+		</action>
+	</package>
+</struts>    

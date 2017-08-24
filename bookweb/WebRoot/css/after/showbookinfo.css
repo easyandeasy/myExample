@@ -1,0 +1,39 @@
+
+body{
+	margin:0px;
+	padding:0px;
+	width:1200px;	
+	height:650px;
+}
+
+
+/* 每本图书信息样式 */
+.bookinfo{
+	float:left;
+	margin-top:10px;
+	margin-right:5px;
+	border:1px solid gray;
+}
+#bookinfo0,#bookinfo1,#bookinfo2,#bookinfo3,#bookinfo4{
+	margin-top:0px;
+}
+table{
+	border:2px solid #f9f9f9;
+}
+tr{
+	font-size:12px;
+}
+
+
+/* 图书信息最大的div样式 */
+.boxi{
+	height:550px;
+	border:1px solid #f9f9f9;
+}
+
+
+/* 分页div样式 */
+.page{
+	text-align:right;
+	width:990px;
+}

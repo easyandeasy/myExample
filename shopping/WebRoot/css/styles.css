@@ -1,0 +1,81 @@
+body{
+	height:620px;
+	width:1340px;
+}
+
+.table1{
+	height:450px;
+}
+.car{
+	margin-left:20px;
+}
+.p{
+	width:1100px;
+	margin-left:120px;
+	text-align:right;
+}
+
+.sub{
+	background-color:red;
+	font-size:20px;
+	color:#fff;
+	width:120px;
+	height:60px;
+}
+
+
+
+/* login中的css */
+
+.loginBody{
+	background-image: url(../images/leng.PNG);
+}
+.center{
+	height:330px;
+	padding-top:110px;
+}
+
+.tb{
+	font-size:25px;
+}
+
+.tb td{
+	padding:5px;
+}
+
+.form{
+	margin-top:80px;
+}
+
+h1{
+	color:gray;
+	width:260px;
+}
+
+.input{
+	font-size:20px;
+}
+
+.loginbtn{
+	font-size:23px;
+	width:225px;
+	border:1px;
+}
+
+.regis{
+	margin-top:80px;
+}
+
+.login{
+	margin-top:62px;
+}
+
+a{
+	text-decoration:none;
+}
+a:hover{
+	color:gray;
+	text-decoration:underline;
+}
+/* register中的css */
+ 

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	
+	<package name="default" namespace="/" extends="struts-default">
+	
+		<interceptors>
+			<!-- 定义权限验证拦截器 -->
+			<interceptor name="isLoginInterceptor"
+				class="com.user.interceptor.IsLoginInterceptor">
+			</interceptor>
+		</interceptors>
+		
+		
+		<action name="login" class="com.user.action.Loginaction">
+			<result name="success"> index.jsp</result>
+			<result name="error">login.jsp</result>
+		</action>
+		
+		<action name="infoAction" class="com.user.action.InfoAction">
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+			<interceptor-ref name="isLoginInterceptor"></interceptor-ref>
+			<result name="success"> info.jsp</result>
+			<result name="error">login.jsp</result>
+		</action>
+	</package>
+	
+</struts>    

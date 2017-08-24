@@ -1,0 +1,90 @@
+
+/*用户登录页面*/
+
+/*设置网页内外边距*/
+.bod{
+	margin:0px;
+	padding:0px;
+}
+
+/*设置包含表单盒子的样式*/
+.box2{
+	float:left;height:270px;width:365px;border:1px solid #EEE;
+	margin:224px 0px 0px 508px;background-color: #fff;
+	border-bottom:0px;
+}
+
+/*设置登路页面背景图片*/
+.box{
+	border: 1px solid #d0d0d0; background: url(/bookweb/book_img/02.jpg) repeat-y -250px;
+	height:495px;margin-top:67px;width:100%;
+	border-bottom:0px;
+}
+
+/*设置登录图片的样式*/
+.img1{
+	float:left;margin:30px 0px 0px 120px;
+}
+
+/*设置用户名文本框样式*/
+.input1{
+	float:left;border:1px solid #d0d0d0;border-left:0px;
+	width:210px;height:42px;margin:-42px 0px 0px 92px;font-size: 15px;
+}
+.span1{
+	float:left;margin:15px 0px 0px 50px;width:40px;
+	height:40px;text-align:center;border:1px solid #d0d0d0;
+}
+
+/*设置密码框样式*/
+.input2{
+	float:left;width:210px;height:42px;border:1px solid #d0d0d0;
+	border-left:0px;margin:-42px 0px 0px 92px;font-size: 15px;
+}
+.span2{
+	float:left;margin:15px 0px 0px 50px;width:40px;height:40px;text-align:center;border:1px solid #d0d0d0;
+}
+
+/*设置文本图片在文本框的内边距*/
+.img2{
+	padding-top:10px;
+}
+.img3{
+	padding-top:10px;
+}
+
+/*设置登录按钮的样式*/
+.sub{
+	float:left;border:0px solid #d0d0d0;margin:15px 0px 0px 50px;width:253px;height:40px;border-radius:9px;
+	background-color:#62B0FF;color:#fff;font-size: 17px;
+}
+
+/*设置忘记密码注册样式*/
+.a1{
+	text-decoration: none;color:#8C8C8C;font-size:12px;float:left;margin:5px 0px 0px 50px;
+}
+.a2{
+	color:#8C8C8C;font-size:12px;text-decoration: none;float:left;margin:5px 0px 0px 175px;
+}
+
+/*设置错误信息lable显示样式*/
+.error{
+	font-family: 宋体;font-size:13px;color:red;
+	position:absolute;
+	left:562px;
+}
+
+
+/*js 样式*/
+
+/*给忘记密码,注册,登录框  鼠标移入移除添加样式*/
+.a1js{
+	color:#28c873;
+}
+.a2js{
+	color:#28c873;
+}
+.input1js{
+	background: #55abe8;
+	cursor:pointer;/*改变鼠标样式 移入变成一只手*/
+}

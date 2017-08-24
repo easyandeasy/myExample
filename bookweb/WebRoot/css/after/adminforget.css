@@ -1,0 +1,158 @@
+
+/* 最大box */
+.center{
+	position:absolute;
+	top:0px;
+	background-color:#f9f9f9;
+	background-image:url(../../images/registinfo.jpg);
+	opacity:1;
+	width:1346px;
+	height:669px;
+	display:none;
+}
+/* 包含步骤的信息样式 */
+.forgetbox{
+	width:500px;
+	height:400px;
+	margin-top:150px;
+}
+/* 关闭最大图片样式 */
+.closeimg{
+	position:absolute;
+	top:0px;
+	right:0px;
+	border-radius:15px;	
+}
+.closeimg:hover{
+	background-color:red;	
+}
+
+/* 步骤最大样式 */
+.one{
+	width:500px;
+	height:28px;
+}
+/* 步骤中的li样式 */
+.one li{
+	float:left;
+	padding:4px 64px 4px 65px;
+	list-style:none;
+	border:0px solid #33FF33;
+	color:#fff;
+	font-weight: bold;
+}
+
+/* 第一步样式 */
+#one{
+	position:absolute;
+	left:584px;
+	top:150px;
+	border-width:15px;
+	border-style: solid solid solid solid;
+	border-color:transparent transparent transparent #00AA00;
+	font-size:0;
+	line-height:0;
+}
+.oneone{
+	background-color:#00AA00;
+}
+
+/* 第二步样式 */
+#two{
+	position:absolute;
+	left:745px;
+	top:150px;
+	border-width:15px;
+	border-style: dashed dashed solid dashed;
+	border-color:transparent transparent transparent #33FF33;
+	font-size:0;
+	line-height:0;
+}
+.onetwo{
+	background-color:#33FF33;
+}
+
+/* 第三步样式 */
+#three{
+	position:absolute;
+	left:906px;
+	top:150px;
+	border-width:15px;
+	border-style: dashed dashed solid dashed;
+	border-color:transparent transparent transparent #33FF33;
+	font-size:0;
+	line-height:0;
+}
+.onethree{
+	background-color:#33FF33;
+}
+
+
+/* 第一步信息样式 */
+.infoone{
+	border:1px solid gray;
+	width:500px;
+	height:372px;
+}
+table{
+	margin-top:60px;
+	width:420px;
+	height:200px;
+}
+.thhead{
+	width:100px;
+	color:#fff;
+}
+td{
+	font-size:15px;
+}
+/* 文本框样式 */
+.forgettext{
+	width:200px;
+	height:30px;
+	text-align:left;
+}
+/* 下一步按钮样式 */
+.nextone{
+	width:200px;
+	height:60px;
+	font-size:20px;
+	color:#fff;
+	background-color:#62b0ff;
+	border:0px solid #d0d0d0;
+	border-radius:7px;	
+}
+
+
+/* 第二步样式 */
+.infotwo{
+	border:1px solid gray;
+	width:500px;
+	height:372px;
+	display:none;
+}
+
+
+/* 第三步样式 */
+.infothree{
+	border:1px solid gray;
+	width:500px;
+	height:372px;
+	color:#fff;
+	display:none;
+}
+
+/* 找回密码logo */
+.logo{
+	position:absolute;
+	top:30px;
+	left:200px;
+}
+
+/* 返回按钮 */
+.back{
+	background-color:#62b0ff;
+	border:0px solid #d0d0d0;
+	border-radius:4px;	
+	color:#fff;
+}
